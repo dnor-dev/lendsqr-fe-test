@@ -1,0 +1,103 @@
+.login-form {
+  margin-top: 2.5rem;
+  width: 447px;
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    & > input[placeholder='Email'] {
+      width: 100%;
+      box-sizing: border-box;
+      height: 50px;
+      border: 2px solid rgba(84, 95, 125, 0.15);
+      border-radius: 5px;
+      padding: 0rem 1rem;
+
+      &::placeholder {
+        color: #545f7d;
+        opacity: 0.6;
+        font-size: 14px;
+        line-height: 19px;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .password {
+      width: 100%;
+      box-sizing: border-box;
+      height: 50px;
+      border: 2px solid rgba(84, 95, 125, 0.15);
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 1rem;
+      gap: 1rem;
+
+      & > input {
+        border: none;
+        height: 100%;
+        padding-left: 1rem;
+        flex: 10;
+
+        &::placeholder {
+          color: #545f7d;
+          opacity: 0.6;
+          font-size: 14px;
+          line-height: 19px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & > button {
+        flex: 1;
+        background-color: inherit;
+        border: none;
+        height: 100%;
+        color: #39cdcc;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        line-height: 16px;
+        cursor: pointer;
+      }
+    }
+
+    & > a {
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 16px;
+      color: #39cdcc;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    & > button {
+      background: #39cdcc;
+      border-radius: 8px;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 19px;
+      border: none;
+      box-sizing: border-box;
+      height: 50px;
+      margin-top: 0.8rem;
+      cursor: pointer;
+
+      &:hover {
+        background: #298888;
+        transition: all 200ms;
+      }
+    }
+  }
+}

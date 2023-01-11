@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Routes, Route } from 'react-router-dom';
 import Login from '../pages/Login';
+import Dashboard from '../pages/Dashboard';
 
 const AppRoutes = () => {
   return (
@@ -11,7 +12,8 @@ const AppRoutes = () => {
         exit={{ opacity: 0 }}
       >
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </motion.div>
     </AnimatePresence>
