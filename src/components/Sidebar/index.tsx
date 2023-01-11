@@ -1,8 +1,52 @@
 import React from 'react';
+import { IoIosArrowDown } from 'react-icons/io';
+import links from './links';
 import './sidebar.scss';
 
+type ItemLink = {
+  id: string;
+  path: string;
+  name: string;
+  img: string;
+};
+
+type Link = {
+  id: string;
+  header: string;
+  links: ItemLink[];
+};
+
 const Sidebar = () => {
-  return <div>This is the sidebar</div>;
+  return (
+    <div className="sidebar-component">
+      <div className="org-switch">
+        <img src="/images/briefcase 1.svg" alt="briefcase" />
+        <p>Switch Organization</p>
+        <IoIosArrowDown />
+      </div>
+
+      <div className="sidebar-item">
+        <img src="/images/home 1.svg" alt="home" />
+        <p>Dashboard</p>
+      </div>
+
+      <div className="sidebar-list">
+        {links.map((link: Link) => (
+          <div className="list-item" key={link.id}>
+            <p>{link.header}</p>
+            <div className="sidebar-links">
+              {link.links.map((item: ItemLink) => (
+                <div className="sidebar-link" key={item.id}>
+                  <img src={item.img} alt={item.name} />
+                  <p>{item.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;

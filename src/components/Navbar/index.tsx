@@ -1,25 +1,26 @@
 import React from 'react';
-import { HiOutlineSearch } from 'react-icons/hi';
+import { FaSearch } from 'react-icons/fa';
 import { FaCaretDown } from 'react-icons/fa';
+import { BsBell } from 'react-icons/bs';
 import './navbar.scss';
 
 const Navbar = () => {
   return (
     <div className="navbar">
-      <div className="logo&search">
-        <img src="" alt="" />
+      <div className="logoandsearch">
+        <img src="/images/Group.svg" alt="lendsqr" />
         <div className="search-component">
           <input type="text" placeholder="Search for anything" />
           <button>
-            <HiOutlineSearch />
+            <FaSearch />
           </button>
         </div>
       </div>
 
       <div className="profile-sect">
         <a href="#">Docs</a>
-        <div className="not&pic">
-          <img src="/images/notification.svg" alt="notifications" />
+        <div className="notandpic">
+          <BsBell className="notification-bell" />
           <div className="profile-pics">
             <img src="/images/joystick-user.png" alt="user" />
             <span>

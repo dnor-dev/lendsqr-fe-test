@@ -14,10 +14,10 @@ const Layout = ({ children }: Props) => {
         <Navbar />
       </header>
       <main>
-        <div>
+        <div className="sidebar">
           <Sidebar />
         </div>
-        <div>{children}</div>
+        <div className="children">{children}</div>
       </main>
     </>
   );

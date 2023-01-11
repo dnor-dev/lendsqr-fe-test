@@ -1,6 +1,118 @@
 .navbar {
-  padding: 1rem;
+  padding: 1.3rem 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 2rem;
+
+  .logoandsearch {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+
+    & > img {
+      width: 144.8px;
+      height: 30px;
+    }
+
+    & > .search-component {
+      display: flex;
+
+      & > input {
+        background: #fff;
+        opacity: 0.2;
+        box-sizing: border-box;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border: 1px solid #213f7d;
+        height: 40px;
+        padding-left: 1rem;
+        width: 350px;
+
+        &:focus {
+          outline: none;
+        }
+
+        &::placeholder {
+          font-size: 14px;
+          color: #545f7d;
+          opacity: 0.7;
+          line-height: 16px;
+          font-weight: 400;
+          font-family: 'Work Sans';
+        }
+      }
+
+      & > button {
+        background: #39cdcc;
+        color: white;
+        border: none;
+        padding: 0 1.3rem;
+        border-radius: 0;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+
+  .profile-sect {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    & > a {
+      line-height: 19px;
+      font-weight: 400;
+      color: #213f7d;
+      font-family: 'Roboto';
+      font-size: 15px;
+    }
+
+    & > .notandpic {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      & > .notification-bell {
+        color: #213f7d;
+        font-size: 23px;
+        cursor: pointer;
+      }
+
+      & > .profile-pics {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        cursor: pointer;
+
+        & > img {
+          height: 48px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        & > span {
+          display: flex;
+          align-items: center;
+          gap: 0.2rem;
+
+          & > p {
+            color: #213f7d;
+            font-family: 'Work Sans';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            margin: 0;
+          }
+
+          &:last-child {
+            color: #213f7d;
+          }
+        }
+      }
+    }
+  }
 }
