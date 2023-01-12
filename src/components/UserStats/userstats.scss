@@ -1,0 +1,27 @@
+.user-stats {
+  width: 100%;
+  padding: 1.2rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+
+  p:nth-child(2) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin-top: 8px;
+    color: #545f7d;
+  }
+
+  p:nth-child(3) {
+    font-weight: 600;
+    font-size: 24px;
+    margin: 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    color: #213f7d;
+  }
+}

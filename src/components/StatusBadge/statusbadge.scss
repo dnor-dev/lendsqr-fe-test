@@ -1,0 +1,33 @@
+@mixin status($bg) {
+  background-color: $bg;
+  font-size: 13px;
+  border-radius: 100px;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5px 12px;
+  width: fit-content;
+  @if $bg == rgba(84, 95, 125, 0.06) {
+    color: #545f7d;
+  } @else if $bg == rgba(233, 178, 0, 0.1) {
+    color: #e9b200;
+  } @else if $bg == rgba(57, 205, 98, 0.06) {
+    color: #39cd62;
+  } @else if $bg == rgba(228, 3, 59, 0.1) {
+    color: #e4033b;
+  }
+}
+
+.inactive {
+  @include status(rgba(84, 95, 125, 0.06));
+}
+
+.pending {
+  @include status(rgba(233, 178, 0, 0.1));
+}
+
+.active {
+  @include status(rgba(57, 205, 98, 0.06));
+}
+.blacklisted {
+  @include status(rgba(228, 3, 59, 0.1));
+}

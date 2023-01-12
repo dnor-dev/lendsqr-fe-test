@@ -1,0 +1,91 @@
+.table {
+  font-family: 'Work Sans';
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 1rem 1.3rem;
+  width: 100%;
+  position: relative;
+
+  & > thead > tr > th > div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    & > p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      display: flex;
+      align-items: flex-end;
+      text-transform: uppercase;
+      color: #545f7d;
+    }
+
+    &:last-child {
+      color: #545f7d;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  & > tbody > tr {
+    &:last-child > td {
+      border-bottom: none;
+    }
+    td {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #545f7d;
+      padding: 1.1rem 0rem;
+      border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+
+      &:last-child {
+        cursor: pointer;
+        position: relative;
+      }
+
+      & > .options {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 1.2rem 1rem;
+        box-sizing: border-box;
+        background: #ffffff;
+        border: 1px solid rgba(84, 95, 125, 0.04);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        position: absolute;
+        z-index: 99;
+        width: 160px;
+        top: 0;
+        right: -42px;
+
+        & > .options-flex {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #545f7d;
+
+          & > p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+thead,
+tr {
+  cursor: pointer;
+}

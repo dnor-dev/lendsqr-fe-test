@@ -1,0 +1,108 @@
+@mixin btn($bg) {
+  border: 1px solid $bg;
+  border-radius: 8px;
+  @if $bg == #545f7d {
+    background: inherit;
+  } @else {
+    background: $bg;
+  }
+  padding: 0rem 1.7rem;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  @if $bg == #39cdcc {
+    color: #fff;
+  } @else {
+    color: #545f7d;
+  }
+  cursor: pointer;
+  font-family: 'Work Sans';
+}
+
+.table-form {
+  background: #ffffff;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 2rem 1rem;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  position: absolute;
+
+  & > .org {
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      box-sizing: border-box;
+      padding: 0rem 1rem;
+      background: #ffffff;
+      border: 1px solid rgba(33, 63, 125, 0.2);
+      border-radius: 8px;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: rgba(84, 95, 125, 0.7);
+
+      & > svg {
+        color: #545f7d;
+      }
+    }
+  }
+
+  & > .input {
+    & > input {
+      width: 100%;
+      height: 40px;
+      box-sizing: border-box;
+      padding: 0rem 1rem;
+      background: #ffffff;
+      border: 1px solid rgba(33, 63, 125, 0.2);
+      border-radius: 8px;
+
+      &::placeholder {
+        font-weight: 400;
+        font-family: 'Work Sans';
+        font-size: 13px;
+        line-height: 16px;
+        color: #545f7d;
+        opacity: 0.7;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .flex-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 0.4rem;
+    font-family: 'Work Sans';
+
+    & > .reset {
+      @include btn(#545f7d);
+    }
+
+    & > .filter {
+      @include btn(#39cdcc);
+    }
+  }
+}
+
+// General
+.label {
+  margin: 0;
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  color: #545f7d;
+  margin-bottom: 10px;
+}

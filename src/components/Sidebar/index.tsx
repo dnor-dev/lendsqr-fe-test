@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosArrowDown } from 'react-icons/io';
+import { useLocation } from 'react-router-dom';
 import links from './links';
 import './sidebar.scss';
 
@@ -17,6 +18,8 @@ type Link = {
 };
 
 const Sidebar = () => {
+  const { pathname } = useLocation();
+
   return (
     <div className="sidebar-component">
       <div className="org-switch">
@@ -36,7 +39,12 @@ const Sidebar = () => {
             <p>{link.header}</p>
             <div className="sidebar-links">
               {link.links.map((item: ItemLink) => (
-                <div className="sidebar-link" key={item.id}>
+                <div
+                  className={`sidebar-link ${
+                    pathname === item.path && 'active-link'
+                  }`}
+                  key={item.id}
+                >
                   <img src={item.img} alt={item.name} />
                   <p>{item.name}</p>
                 </div>
