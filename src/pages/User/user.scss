@@ -1,0 +1,71 @@
+@mixin btn($bg) {
+  border: 1px solid $bg;
+  border-radius: 8px;
+  height: 40px;
+  padding: 0rem 1.2rem;
+  color: $bg;
+  background: inherit;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  font-family: 'Work Sans';
+  cursor: pointer;
+}
+
+.user {
+  font-family: 'Work Sans';
+  margin: auto;
+  width: 90%;
+
+  & > .back {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+
+    & > svg {
+      color: #545f7d;
+      font-size: 1.2rem;
+    }
+
+    & > p {
+      font-weight: 400;
+      font-size: 15px;
+      margin: 0;
+      color: #545f7d;
+    }
+  }
+
+  & > .details {
+    margin-top: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > h5 {
+      margin: 0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 23px;
+      color: #213f7d;
+    }
+
+    & > .flex-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      & > .blacklist {
+        @include btn(#e4033b);
+      }
+
+      & > .activate {
+        @include btn(#39cdcc);
+      }
+    }
+  }
+}
