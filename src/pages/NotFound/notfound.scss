@@ -1,0 +1,18 @@
+.not-found {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > p:first-child {
+    color: #213f7d;
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  & > p:last-child {
+    margin: 10px;
+  }
+}

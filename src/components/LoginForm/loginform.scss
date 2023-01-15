@@ -1,6 +1,8 @@
 .login-form {
   margin-top: 2.5rem;
   width: 447px;
+  font-family: 'Work Sans';
+
   form {
     display: flex;
     flex-direction: column;
@@ -19,6 +21,7 @@
         opacity: 0.6;
         font-size: 14px;
         line-height: 19px;
+        font-family: 'Work Sans';
       }
 
       &:focus {
@@ -49,6 +52,7 @@
           opacity: 0.6;
           font-size: 14px;
           line-height: 19px;
+          font-family: 'Work Sans';
         }
 
         &:focus {
@@ -64,6 +68,7 @@
         color: #39cdcc;
         font-weight: 600;
         font-size: 12px;
+        font-family: 'Work Sans';
         letter-spacing: 0.1em;
         line-height: 16px;
         cursor: pointer;
@@ -87,6 +92,7 @@
       letter-spacing: 0.1em;
       font-weight: 600;
       font-size: 14px;
+      font-family: 'Work Sans';
       line-height: 19px;
       border: none;
       box-sizing: border-box;

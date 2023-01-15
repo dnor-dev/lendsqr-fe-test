@@ -1,17 +1,28 @@
 import { AiOutlineUser, AiOutlineStar, AiFillStar } from 'react-icons/ai';
 import './userdetails.scss';
+import { UserDetails } from '../../types';
 
-const UserDetails = () => {
+type Props = {
+  userDetail: UserDetails;
+};
+
+const UserDetailsComponent = ({ userDetail }: Props) => {
   return (
     <div className="user-details">
       <div className="profile">
-        <div className="profile-pics">
-          <AiOutlineUser />
-        </div>
+        {userDetail.profile.avatar === null ||
+        userDetail.profile.avatar === '' ? (
+          <div className="profile-pics">
+            <AiOutlineUser />
+          </div>
+        ) : (
+          <img src={userDetail.profile.avatar} alt={userDetail.userName} />
+        )}
+
         <div className="profile-details">
           <div className="deet">
-            <p>Grace Effiom</p>
-            <p>LSQFf587g90</p>
+            <p>{`${userDetail.profile.firstName} ${userDetail.profile.lastName}`}</p>
+            <p>{userDetail.email}</p>
           </div>
           <hr className="divider" />
           <div className="deet">
@@ -24,8 +35,8 @@ const UserDetails = () => {
           </div>
           <hr className="divider" />
           <div className="deet">
-            <p>&#8358;200,000.000</p>
-            <p>9912345678/Providus Bank</p>
+            <p>&#8358;{userDetail.accountBalance.toLocaleLowerCase()}</p>
+            <p>{userDetail.accountNumber}/Providus Bank</p>
           </div>
         </div>
       </div>
@@ -42,4 +53,4 @@ const UserDetails = () => {
   );
 };
 
-export default UserDetails;
+export default UserDetailsComponent;

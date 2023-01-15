@@ -15,9 +15,7 @@ const Dashboard = () => {
         <UserStats name="usersWithSavings" value={102453} />
       </div>
 
-      <div className="users-table">
-        <UsersTable />
-      </div>
+      <UsersTable />
     </div>
   );
 };

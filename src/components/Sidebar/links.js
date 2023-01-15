@@ -137,6 +137,12 @@ const links = [
         name: 'Audit Logs',
         img: '/images/clipboard-list 1.svg',
       },
+      {
+        id: v4(),
+        path: '/tr',
+        name: 'Systems Messages',
+        img: '/images/tire 1.svg',
+      },
     ],
   },
 ];

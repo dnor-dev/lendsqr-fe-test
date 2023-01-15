@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import Navbar from '../Navbar';
 import Sidebar from '../Sidebar';
+import { useLocation } from 'react-router-dom';
 import './layout.scss';
 
 type Props = {
@@ -8,7 +9,8 @@ type Props = {
 };
 
 const Layout = ({ children }: Props) => {
-  return (
+  const { pathname } = useLocation();
+  return pathname !== '/login' ? (
     <>
       <header className="header">
         <Navbar />
@@ -20,6 +22,8 @@ const Layout = ({ children }: Props) => {
         <div className="children">{children}</div>
       </main>
     </>
+  ) : (
+    <></>
   );
 };
 

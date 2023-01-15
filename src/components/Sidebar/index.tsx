@@ -52,6 +52,13 @@ const Sidebar = () => {
             </div>
           </div>
         ))}
+        <div className="logout">
+          <div className="logout-link">
+            <img src="/images/sign-out 1.svg" alt="logout" />
+            <p>Logout</p>
+          </div>
+          <p>v1.2.0</p>
+        </div>
       </div>
     </div>
   );

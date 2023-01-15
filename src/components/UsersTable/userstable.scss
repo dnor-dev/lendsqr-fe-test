@@ -1,13 +1,21 @@
 .table {
   font-family: 'Work Sans';
   box-sizing: border-box;
-  background: #ffffff;
-  border: 1px solid rgba(33, 63, 125, 0.06);
-  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  background: inherit;
   border-radius: 4px;
   padding: 1rem 1.3rem;
   width: 100%;
   position: relative;
+
+  & > thead > tr > th {
+    padding: 0rem 0.6rem;
+    &:first-child {
+      padding: 0rem 0rem;
+    }
+    &:last-child {
+      padding: 0rem 0rem;
+    }
+  }
 
   & > thead > tr > th > div {
     display: flex;
@@ -42,12 +50,17 @@
       font-size: 14px;
       line-height: 16px;
       color: #545f7d;
-      padding: 1.1rem 0rem;
+      padding: 1.1rem 0.6rem;
       border-bottom: 1px solid rgba(33, 63, 125, 0.1);
 
       &:last-child {
+        padding: 1.1rem 0rem;
         cursor: pointer;
         position: relative;
+      }
+
+      &:first-child {
+        padding: 1.1rem 0rem;
       }
 
       & > .options {
@@ -83,9 +96,18 @@
       }
     }
   }
+
+  & > tbody > tr > td {
+    text-transform: capitalize;
+  }
 }
 
 thead,
 tr {
   cursor: pointer;
+  white-space: nowrap !important;
+}
+
+.lowercase {
+  text-transform: lowercase !important;
 }
