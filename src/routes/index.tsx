@@ -14,9 +14,9 @@ const AppRoutes = () => {
         exit={{ opacity: 0 }}
       >
         <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/user/:id" element={<User />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/users" element={<Dashboard />} />
+          <Route path="/users/:id" element={<User />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </motion.div>

@@ -2,6 +2,7 @@
   background: #ffffff;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   position: sticky;
+  width: 100%;
   z-index: 999;
   top: 0;
 }
@@ -12,11 +13,20 @@ main {
   & > .sidebar {
     width: 19%;
     z-index: 99999;
+
+    @media (max-width: 800px) {
+      display: none;
+    }
   }
 
   & > .children {
     width: 81%;
     padding: 2rem 0rem;
     background: rgba(229, 229, 229, 0.2);
+
+    @media (max-width: 800px) {
+      width: 100%;
+      padding: 1rem 0rem;
+    }
   }
 }

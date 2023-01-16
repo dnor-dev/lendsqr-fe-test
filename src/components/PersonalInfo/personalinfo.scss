@@ -25,6 +25,11 @@
       row-gap: 1.4rem;
       border-bottom: 1px solid rgba(33, 63, 125, 0.1);
       padding-bottom: 1.5rem;
+      gap: 1rem;
+
+      @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     & > .grid-4 {
@@ -34,6 +39,10 @@
       row-gap: 1.4rem;
       border-bottom: 1px solid rgba(33, 63, 125, 0.1);
       padding-bottom: 1.5rem;
+      gap: 1rem;
+      @media (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 }
@@ -59,6 +68,7 @@
     font-weight: 500;
     font-size: 14px;
     text-transform: capitalize;
+    word-break: break-all;
     color: #545f7d;
   }
 }

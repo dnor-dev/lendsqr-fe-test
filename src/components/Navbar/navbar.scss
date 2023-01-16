@@ -4,19 +4,34 @@
   align-items: center;
   gap: 2rem;
 
+  @media (max-width: 800px) {
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
   .logoandsearch {
     width: 75%;
     display: flex;
     align-items: center;
     gap: 9rem;
+    @media (max-width: 800px) {
+      width: 65%;
+    }
 
     & > img {
       width: 144.8px;
       height: 30px;
+
+      @media (max-width: 800px) {
+        zoom: 0.9;
+      }
     }
 
     & > .search-component {
       display: flex;
+      @media (max-width: 800px) {
+        display: none;
+      }
 
       & > input {
         background: #fff;
@@ -60,6 +75,9 @@
     display: flex;
     align-items: center;
     gap: 4rem;
+    @media (max-width: 800px) {
+      width: 35%;
+    }
 
     & > a {
       line-height: 19px;
@@ -67,6 +85,9 @@
       color: #213f7d;
       font-family: 'Roboto';
       font-size: 15px;
+      @media (max-width: 800px) {
+        display: none;
+      }
     }
 
     & > .notandpic {
@@ -75,10 +96,17 @@
       align-items: center;
       gap: 2rem;
 
+      @media (max-width: 800px) {
+        display: grid;
+      }
+
       & > .notification-bell {
         color: #213f7d;
         font-size: 23px;
         cursor: pointer;
+        @media (max-width: 800px) {
+          display: none;
+        }
       }
 
       & > .profile-pics {
@@ -86,17 +114,32 @@
         align-items: center;
         gap: 0.7rem;
         cursor: pointer;
+        user-select: none;
+        -webkit-user-select: none;
+        &::selection {
+          color: none;
+          background: none;
+        }
+        @media (max-width: 800px) {
+          justify-self: flex-end;
+        }
 
         & > img {
           height: 48px;
           border-radius: 50%;
           object-fit: cover;
+          @media (max-width: 800px) {
+            zoom: 0.7;
+          }
         }
 
         & > span {
           display: flex;
           align-items: center;
           gap: 0.2rem;
+          @media (max-width: 1100px) {
+            display: none;
+          }
 
           & > p {
             color: #213f7d;

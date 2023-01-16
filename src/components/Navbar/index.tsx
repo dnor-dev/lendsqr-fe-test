@@ -2,6 +2,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import { FaCaretDown } from 'react-icons/fa';
 import { BsBell } from 'react-icons/bs';
+import MobileNav from '../MobileNav';
 import './navbar.scss';
 
 const Navbar = () => {
@@ -23,6 +24,7 @@ const Navbar = () => {
           <BsBell className="notification-bell" />
           <div className="profile-pics">
             <img src="/images/joystick-user.png" alt="user" />
+            <MobileNav />
             <span>
               <p>Adedeji</p>
               <FaCaretDown />

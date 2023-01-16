@@ -14,7 +14,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      {window.location.pathname === '/login' && <Login />}
+      {window.location.pathname === '/' ? <Login /> : <></>}
       <Layout>
         <AppRoutes />
       </Layout>

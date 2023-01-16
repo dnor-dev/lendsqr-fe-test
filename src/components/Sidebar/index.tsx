@@ -4,14 +4,14 @@ import { useLocation } from 'react-router-dom';
 import links from './links';
 import './sidebar.scss';
 
-type ItemLink = {
+export type ItemLink = {
   id: string;
   path: string;
   name: string;
   img: string;
 };
 
-type Link = {
+export type Link = {
   id: string;
   header: string;
   links: ItemLink[];

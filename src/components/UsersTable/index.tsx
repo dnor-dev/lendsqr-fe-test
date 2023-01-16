@@ -117,7 +117,7 @@ const UsersTable = () => {
                       <div className="options" ref={optionsRef}>
                         <div
                           className="options-flex"
-                          onClick={() => navigate(`user/${detail.id}`)}
+                          onClick={() => navigate(`/users/${detail.id}`)}
                         >
                           <MdOutlineVisibility />
                           <p>View Details</p>

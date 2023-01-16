@@ -10,7 +10,7 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   const { pathname } = useLocation();
-  return pathname !== '/login' ? (
+  return pathname !== '/' ? (
     <>
       <header className="header">
         <Navbar />

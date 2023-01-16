@@ -32,7 +32,7 @@ const User = () => {
     setLoading(true);
     try {
       const res = localStorage.getItem('user-details') ?? '';
-      if (res === '') {
+      if (res === '' || JSON.parse(res).id !== id) {
         getUserDetail();
       } else {
         setUserDetail(JSON.parse(res));
@@ -50,7 +50,7 @@ const User = () => {
 
   return (
     <div className="user">
-      <div className="back" onClick={() => navigate('/')}>
+      <div className="back" onClick={() => navigate('/users')}>
         <CgArrowLongLeft />
         <p>Back to Users</p>
       </div>

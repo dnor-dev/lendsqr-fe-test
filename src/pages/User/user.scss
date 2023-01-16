@@ -13,6 +13,11 @@
   letter-spacing: 0.1em;
   font-family: 'Work Sans';
   cursor: pointer;
+
+  @media (max-width: 800px) {
+    font-size: 12px;
+    padding: 0rem 0.7rem;
+  }
 }
 
 .user {
@@ -46,7 +51,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    @media (max-width: 800px) {
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
     & > h5 {
       margin: 0;
       font-style: normal;

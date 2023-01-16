@@ -1,8 +1,10 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './loginform.scss';
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="login-form">
@@ -25,7 +27,13 @@ const LoginForm = () => {
 
         <a href="#">forgot password?</a>
 
-        <button type="submit">log in</button>
+        <button
+          onClick={(e: any) => {
+            navigate('users');
+          }}
+        >
+          log in
+        </button>
       </form>
     </div>
   );
