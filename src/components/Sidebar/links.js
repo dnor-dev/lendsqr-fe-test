@@ -7,7 +7,7 @@ const links = [
     links: [
       {
         id: v4(),
-        path: '/',
+        path: '/users',
         name: 'Users',
         img: '/images/user-friends 1.svg',
       },
